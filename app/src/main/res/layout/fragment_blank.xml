@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:tools="http://schemas.android.com/tools"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      tools:context=".adapters.BlankFragment">
+
+      <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageButton
+                  android:id="@+id/imgPrevButFrag"
+                  android:layout_width="30dp"
+                  android:layout_height="60dp"
+                  android:src="@mipmap/ic_action_arrow_back"
+                  android:background="@android:color/transparent"
+                  android:layout_alignParentTop="true"
+                  android:layout_alignParentStart="true"
+                  android:layout_alignParentBottom="true"
+                  />
+
+            <LinearLayout
+                  android:id="@+id/baseView"
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:orientation="vertical">
+
+                  <TextView
+                        android:id="@+id/real_questions"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dimen_default_small"
+                        android:layout_marginTop="@dimen/dimen_medium"
+                        android:layout_marginEnd="@dimen/dimen_default_small"
+                        android:fontFamily="@font/nova_slim"
+                        android:gravity="start"
+                        android:textColor="@color/colorBack"
+                        android:padding="@dimen/dimen_small"
+                        android:text="@string/hello_blank_fragment"
+                        android:textSize="@dimen/dimen_textSize_default"
+                        android:textStyle="bold"/>
+
+                  <TextView
+                        android:id="@+id/txt_hint"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dimen_default_small"
+                        android:layout_marginEnd="@dimen/dimen_default_small"
+                        android:fontFamily="@font/roboto_slab"
+                        android:textStyle="italic"
+                        android:gravity="start"
+                        android:paddingStart="@dimen/dimen_small"
+                        android:paddingEnd="@dimen/dimen_small"
+                        android:text="@string/hello_blank_fragment"
+                        android:textSize="@dimen/dimen_textSize_default" />
+
+                  <include layout="@layout/model_text" />
+                  <include layout="@layout/model_textarea" />
+                  <include layout="@layout/model_radio" />
+                  <include layout="@layout/model_checkbox" />
+
+            </LinearLayout>
+
+            <ImageButton
+                  android:id="@+id/imgNextButFrag"
+                  android:layout_width="30dp"
+                  android:layout_height="60dp"
+                  android:src="@mipmap/ic_action_arrow_front"
+                  android:background="@android:color/transparent"
+                  android:layout_alignParentTop="true"
+                  android:layout_alignParentBottom="true"
+                  android:layout_alignParentEnd="true" />
+      </RelativeLayout>
+
+</FrameLayout>

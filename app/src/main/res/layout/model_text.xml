@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+      xmlns:android="http://schemas.android.com/apk/res/android"
+      android:orientation="vertical"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="@dimen/dimen_medium_one"
+      android:id="@+id/textarea">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/et_answer_text"
+        android:maxLines="1"
+        android:imeOptions="actionNext"
+          android:background="@drawable/edit_text"
+        android:singleLine="true"
+          android:paddingStart="@dimen/dimen_small"
+          android:paddingEnd="@dimen/dimen_default"
+          android:paddingTop="@dimen/dimen_default"
+          android:paddingBottom="@dimen/dimen_small"
+          android:layout_marginStart="@dimen/dimen_medium"
+          android:layout_marginEnd="@dimen/dimen_medium"/>
+
+</LinearLayout>

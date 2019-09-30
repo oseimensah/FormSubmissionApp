@@ -1,0 +1,519 @@
+{
+    "PHC": {
+    "form": "PHC1C",
+    "title": "Floating Population Questionnaire",
+    "section": "SECTION B: Socio-demograhic Characteristics",
+    "pages": {
+        "fields": [
+            {
+                "label": "Name of of respondent",
+                "code": "P00a",
+                "type": "text"
+            },
+            {
+                "label": "Sex",
+                "code": "P00b",
+                "type": "radio",
+                "options": [
+                    {
+                        "01": "Male",
+                        "02": "Female"
+                    }
+                ]
+            },
+            {
+                "label": "Date of birth",
+                "code": "P01",
+                "type": "date"
+            },
+            {
+                "label": "Age",
+                "code": "P02",
+                "type": "numeric"
+            },
+            {
+                "label": "What is [Name]'s nationality?",
+                "code": "P03a",
+                "type": "radio",
+                "options": [
+                    {
+                        "01": "Ghanaian by Birth",
+                        "02": "Ghanaian by Naturalization",
+                        "03": "Dual Nationality",
+                        "04": "Non-Ghanaian"
+                    }
+                ],
+                "gotoIf": [
+                    {
+                        "answer": "1",
+                        "next": "P04"
+                    },
+                    {
+                        "answer": "2",
+                        "next": "P05"
+                    },
+                    {
+                        "answer": "3",
+                        "next": "P03bi"
+                    },
+                    {
+                        "answer": "4",
+                        "next": "P03bii"
+                    }
+                ]
+            },
+            {
+                "label": "What is [Name]'s other nationality?",
+                "code": "P03bi",
+                "type": "text"
+            },
+            {
+                "label": "What is [Name]'s country of nationality?",
+                "code": "P03bii",
+                "type": "text"
+            },
+            {
+                "label": "Was [Name] born in this town/village?",
+                "code": "P05",
+                "type": "radio",
+                "options": [
+                    {
+                        "01": "Yes",
+                        "02": "No"
+                    }
+                ],
+                "gotoIf": [
+                    {
+                        "answer": "1",
+                        "next": "P09"
+                    }
+                ]
+            },
+            {
+                "label": "In what district or country was [Name] born?",
+                "code": "P06",
+                "type": "text"
+            },
+            {
+                "label": "What is [Name]'s religious affiliation?",
+                "code": "P09",
+                "type": "radio",
+                "options": [
+                    {
+                        "01": "No Religion",
+                        "02": "Catholic",
+                        "03": "Protestant(Anglican, Lutheran, Presbyterian, Methodist, etc...)",
+                        "04": "Pentecostal/Charismatic",
+                        "05": "Other Christian",
+                        "06": "Islam",
+                        "07": "Ahmadi",
+                        "08": "Traditionalist",
+                        "09": "Other"
+                    }
+                ]
+            },
+            {
+                "label": "What is [Name]'s current marital status?",
+                "code": "P10",
+                "type": "radio",
+                "options": [
+                    {
+                        "01": "Never married",
+                        "02": "Informal/consensual union/living together",
+                        "03": "Married",
+                        "04": "Separated",
+                        "05": "Divorced",
+                        "06": "Widowed"
+                    }
+                ]
+            },
+            {
+                "label": "Can [Name] read and write in any language?(6 years and older)",
+                "code": "P11a",
+                "type": "radio",
+                "options": [
+                    {
+                        "01": "Yes, read only",
+                        "02": "Yes, read and write",
+                        "03": "No"
+                    }
+                ],
+                "gotoIf": [
+                    {
+                        "answer": "1",
+                        "next": "P11bi"
+                    },
+                    {
+                        "answer": "2",
+                        "next": "P11bii"
+                    },
+                    {
+                        "answer": "3",
+                        "next": "P12a"
+                    }
+                ]
+            },
+            {
+                "label": "In what language can [Name] read?",
+                "code": "P11bi",
+                "type": "radio",
+                "options": [
+                    {
+                        "01": "English only",
+                        "02": "Ghanaian language only",
+                        "03": "French only",
+                        "04": "English and Ghanaian language",
+                        "05": "English and French",
+                        "06": "French and Ghanaian language",
+                        "07": "English, French and Ghanaian language",
+                        "08": "Other"
+                    }
+                ]
+            },
+            {
+                "label": "In what language can [Name] read and write?",
+                "code": "P11bii",
+                "type": "radio",
+                "options": [
+                    {
+                        "01": "English only",
+                        "02": "Ghanaian language only",
+                        "03": "French only",
+                        "04": "English and Ghanaian language",
+                        "05": "English and French",
+                        "06": "French and Ghanaian language",
+                        "07": "English, French and Ghanaian language",
+                        "08": "Other"
+                    }
+                ]
+            },
+            {
+                "label": "Has [Name] ever attended school or is [Name] attending school now?",
+                "code": "P12a",
+                "type": "radio",
+                "options": [
+                    {
+                        "01": "Never",
+                        "02": "Now",
+                        "03": "Past"
+                    }
+                ],
+                "gotoIf": [
+                    {
+                        "answer": "1",
+                        "next": "P13a"
+                    }
+                ]
+            },
+            {
+                "label": "What is the highest level of schooling [Name] is attending now / attended in the past",
+                "code": "P12b",
+                "type": "radio",
+                "options": [
+                    {
+                        "01": "Nursery",
+                        "02": "Kindergarten",
+                        "03": "Primary",
+                        "04": "JSS/JHS",
+                        "05": "Middle",
+                        "06": "SSS/SHS",
+                        "07": "Secondary",
+                        "08": "Voc/technical/commercial",
+                        "09": "Post middle/secondary certificate(teacher training/college of education, agric, nursing, etc...)",
+                        "10": "Post-secondary Diploma/(University diploma, HND, teacher training/college of education diploma, etc...)",
+                        "11": "Bachelor degree",
+                        "12": "Masters",
+                        "13": "PhD",
+                        "14": "Other"
+                    }
+                ],
+                "gotoIf": [
+                    {
+                        "answer": "12",
+                        "next": "P13a"
+                    },
+                    {
+                        "answer": "13",
+                        "next": "P13a"
+                    }
+                ]
+            },
+            {
+                "label": "What is the highest grade(form/class/level,etc...) [Name] has completed at that level of schooling?",
+                "code": "P12c",
+                "type": "text"
+            },
+            {
+                "label": "During the 7 days before census night, did [Name] work in any activity for pay(cash or kind) or profit for atleast one hour?",
+                "code": "P13a",
+                "type": "radio",
+                "options": [
+                    {
+                        "01": "Yes",
+                        "02": "No"
+                    }
+                ],
+                "gotoIf": [
+                    {
+                        "answer": "1",
+                        "next": "P14"
+                    }
+                ]
+            },
+            {
+                "label": "During the 7 days, how was [Name] mainly engaged?",
+                "code": "P13b",
+                "type": "radio",
+                "options": [
+                    {
+                        "01": "Worked in economic activity, but received no payment",
+                        "02": "Did not work, but had job to go back to",
+                        "03": "Worked before, seeking work and available for work",
+                        "04": "Seeking work for the first time and available for work",
+                        "05": "Did not work and not seeking work"
+                    }
+                ],
+                "gotoIf": [
+                    {
+                        "answer": "3",
+                        "next": "P14"
+                    },
+                    {
+                        "answer": "4",
+                        "next": "P18a"
+                    },
+                    {
+                        "answer": "5",
+                        "next": "P13e"
+                    }
+                ]
+            },
+            {
+                "label": "Which type of work has [Name] been mainly engaged in?",
+                "code": "P13c",
+                "type": "radio",
+                "options": [
+                    {
+                        "01": "Wage/Salary/Profit work",
+                        "02": "Paid apprentice work",
+                        "03": "Unpaid apprentice work",
+                        "04": "Contributing family work",
+                        "05": "Voluntary work without pay",
+                        "06": "Non-voluntary work without pay",
+                        "07": "Own-use production work",
+                        "08": "Own-use service work"
+                    }
+                ],
+                "gotoIf": [
+                    {
+                        "answer": "1",
+                        "next": "P14"
+                    },
+                    {
+                        "answer": "2",
+                        "next": "P14"
+                    },
+                    {
+                        "answer": "3",
+                        "next": "P14"
+                    },
+                    {
+                        "answer": "4",
+                        "next": "P14"
+                    },
+                    {
+                        "answer": "5",
+                        "next": "P14"
+                    },
+                    {
+                        "answer": "6",
+                        "next": "P14"
+                    }
+                ]
+            },
+            {
+                "label": "Are the products obtained from [Name]'s activity intended for sale or barter or for family use?",
+                "code": "P13d",
+                "type": "radio",
+                "options": [
+                    {
+                        "01": "Only for sale/barter",
+                        "02": "Mainly for sale/barter but some for family use",
+                        "03": "Mainly for own/family use but some for sale/barter",
+                        "04": "Only for own/family use"
+                    }
+                ]
+            },
+            {
+                "label": "Why did [Name] not work and not seeking work?",
+                "code": "P13e",
+                "type": "radio",
+                "options": [
+                    {
+                        "01": "Did home duties (household chores/full time homemaker)",
+                        "02": "In full time education/student",
+                        "03": "Pensioner/Retired",
+                        "04": "Disabled",
+                        "05": "Too sick to work",
+                        "06": "Too old",
+                        "07": "Too young",
+                        "08": "Other"
+                    }
+                ]
+            },
+            {
+                "label": "Detailed description of your occupation",
+                "code": "P14",
+                "type": "text"
+            },
+            {
+                "label": "What is the main economic activity (product or service) of the establishment where [Name] work/worked?",
+                "code": "P15a",
+                "type": "text"
+            },
+            {
+                "label": "What was [Name]'s employment status in that establishment/business/industry?",
+                "code": "P16",
+                "type": "radio",
+                "options": [
+                    {
+                        "01": "Employee",
+                        "02": "Self-employed without employees",
+                        "03": "Self-employed with employees",
+                        "04": "Casual worker",
+                        "05": "Contributing family worker",
+                        "06": "Paid apprentice",
+                        "07": "Unpaid apprentice",
+                        "08": "Domestic employee(househelp, garden boy, etc...)",
+                        "09": "Other"
+                    }
+                ]
+            },
+            {
+                "label": "In what sector was [Name] mainly working?",
+                "code": "P17",
+                "type": "radio",
+                "options": [
+                    {
+                        "01": "Public (Government)",
+                        "02": "Semi-Public/Parastatal",
+                        "03": "Private Formal",
+                        "04": "Private Informal",
+                        "05": "NGO/CSO (Local)",
+                        "06": "NGO/CSO (International)",
+                        "07": "International Organization"
+                    }
+                ]
+            },
+            {
+                "label": "Does [Name] have difficulty seeing even if wearing glasses. Will you say that [Name] has no difficulty, some difficulty, a lot of difficulty or cannot see at all?",
+                "code": "P18a",
+                "type": "radio",
+                "options": [
+                    {
+                        "01": "No difficulty",
+                        "02": "Yes, some difficulty",
+                        "03": "Yes, a lot of difficulty",
+                        "04": "Cannot do at all"
+                    }
+                ]
+            },
+            {
+                "label": "Does [Name] have difficulty hearing even if using a hearing aid? Will you say that [Name] has no difficulty, some difficulty, a lot of difficulty or cannot hear at all?",
+                "code": "P18b",
+                "type": "radio",
+                "options": [
+                    {
+                        "01": "No difficulty",
+                        "02": "Yes, some difficulty",
+                        "03": "Yes, a lot of difficulty",
+                        "04": "Cannot do at all"
+                    }
+                ]
+            },
+            {
+                "label": "Does [Name] have difficulty walking or climbing stairs? Will you say that [Name] has no difficulty, some difficulty, a lot of difficulty or cannot do at all?",
+                "code": "P18c",
+                "type": "radio",
+                "options": [
+                    {
+                        "01": "No difficulty",
+                        "02": "Yes, some difficulty",
+                        "03": "Yes, a lot of difficulty",
+                        "04": "Cannot do at all"
+                    }
+                ]
+            },
+            {
+                "label": "Does [Name] have difficulty remembering or concentrating? Will you say that [Name] has no difficulty, some difficulty, a lot of difficulty or cannot remember or concentrate at all?",
+                "code": "P18d",
+                "type": "radio",
+                "options": [
+                    {
+                        "01": "No difficulty",
+                        "02": "Yes, some difficulty",
+                        "03": "Yes, a lot of difficulty",
+                        "04": "Cannot do at all"
+                    }
+                ]
+            },
+            {
+                "label": "Does [Name] have difficulty with self-care such as washing all over the body or dressing? Will you say that [Name] has no difficulty, some difficulty, a lot of difficulty or cannot do at all?",
+                "code": "P18e",
+                "type": "radio",
+                "options": [
+                    {
+                        "01": "No difficulty",
+                        "02": "Yes, some difficulty",
+                        "03": "Yes, a lot of difficulty",
+                        "04": "Cannot do at all"
+                    }
+                ]
+            },
+            {
+                "label": "Using (his/her) usual language, does [Name] have difficulty communicating (eg.understanding or being understood by others? Will you say that [Name] has no difficulty, some difficulty, a lot of difficulty or cannot do at all?",
+                "code": "P18f",
+                "type": "radio",
+                "options": [
+                    {
+                        "01": "No difficulty",
+                        "02": "Yes, some difficulty",
+                        "03": "Yes, a lot of difficulty",
+                        "04": "Cannot do at all"
+                    }
+                ]
+            },
+            {
+                "label": "Children ever born - Male (For females 12 years and older)",
+                "code": "P20ai",
+                "type": "numeric"
+            },
+            {
+                "label": "Children ever born - Female (For females 12 years and older)",
+                "code": "P20aii",
+                "type": "numeric"
+            },
+            {
+                "label": "Children surviving - Male (For females 12 years and older)",
+                "code": "P20bi",
+                "type": "numeric"
+            },
+            {
+                "label": "Children surviving - Female (For females 12 years and older)",
+                "code": "P20bii",
+                "type": "numeric"
+            },
+            {
+                "label": "Children born in the past 12 months - Male (For females 12-54 years old)",
+                "code": "P20ci",
+                "type": "numeric"
+            },
+            {
+                "label": "Children born in the past 12 months - Female (For females 12-54 years old)",
+                "code": "P20cii",
+                "type": "numeric"
+            }
+        ]
+    }
+    }
+}

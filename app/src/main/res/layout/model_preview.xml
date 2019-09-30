@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+      xmlns:android="http://schemas.android.com/apk/res/android"
+      android:id="@+id/preview_model"
+      android:orientation="vertical"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:background="#80F1F1F1">
+
+      <ImageButton
+            android:id="@+id/preview_close"
+            android:layout_width="46dp"
+            android:layout_height="46dp"
+            android:background="@android:color/transparent"
+            android:src="@mipmap/ic_action_back"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/dimen_default"
+            android:layout_marginTop="@dimen/dimen_small"
+            android:layout_marginBottom="@dimen/dimen_small"/>
+
+      <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/preview_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/preview_close"
+            android:layout_marginBottom="@dimen/dimen_medium_one"
+            android:layout_marginStart="@dimen/dimen_small"
+            android:layout_marginEnd="@dimen/dimen_small"/>
+
+      <Button
+            android:id="@+id/saveData"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@color/colorGreen80"
+            android:text="Save"
+            android:textColor="@color/colorWhite"
+            android:layout_alignParentBottom="true"
+            />
+
+</RelativeLayout>

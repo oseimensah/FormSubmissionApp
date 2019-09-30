@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+      xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+      xmlns:tools="http://schemas.android.com/tools"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:id="@+id/linearMain"
+      android:orientation="vertical"
+      android:background="@color/colorGrey15"
+      tools:context=".view.MainActivity">
+
+      <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <include layout="@layout/toolbar" />
+      </com.google.android.material.appbar.AppBarLayout>
+
+      <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:layout_marginStart="@dimen/dimen_default">
+            <EditText
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:hint="EA. No."
+                  android:layout_marginEnd="@dimen/dimen_small"
+                  android:paddingStart="@dimen/dimen_small"
+                  android:paddingEnd="@dimen/dimen_small"/>
+
+            <EditText
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:hint="STRUC. No."
+                  android:layout_marginEnd="@dimen/dimen_small"
+                  android:paddingStart="@dimen/dimen_small"
+                  android:paddingEnd="@dimen/dimen_small"/>
+
+            <EditText
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:hint="HH. No."
+                  android:layout_marginEnd="@dimen/dimen_small"
+                  android:paddingStart="@dimen/dimen_small"
+                  android:paddingEnd="@dimen/dimen_small"/>
+            <EditText
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:hint="Q. No."
+                  android:paddingStart="@dimen/dimen_small"
+                  android:paddingEnd="@dimen/dimen_small"
+                  android:layout_marginEnd="@dimen/dimen_default"/>
+
+      </LinearLayout>
+      <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/container">
+            <ImageButton
+                  android:id="@+id/imgPrev"
+                  android:layout_width="30dp"
+                  android:layout_height="60dp"
+                  android:src="@mipmap/ic_action_arrow_back"
+                  android:background="@android:color/transparent"
+                  android:layout_alignParentTop="true"
+                  android:layout_alignParentStart="true"
+                  android:layout_alignParentBottom="true"/>
+
+            <LinearLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:id="@+id/mainLinear"
+                  android:background="@android:color/transparent"
+                  android:orientation="vertical"
+                  android:layout_marginTop="@dimen/dimen_default"
+                  android:layout_marginBottom="@dimen/dimen_default"
+                  >
+
+                  <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/question_recycler"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:clipToPadding="false"
+                        >
+
+                  </androidx.recyclerview.widget.RecyclerView>
+
+            </LinearLayout>
+
+            <ImageButton
+                  android:id="@+id/imgNext"
+                  android:layout_width="30dp"
+                  android:layout_height="60dp"
+                  android:src="@mipmap/ic_action_arrow_front"
+                  android:background="@android:color/transparent"
+                  android:layout_alignParentTop="true"
+                  android:layout_alignParentBottom="true"
+                  android:layout_alignParentEnd="true"/>
+      </RelativeLayout>
+
+</LinearLayout>

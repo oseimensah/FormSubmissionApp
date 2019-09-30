@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+      <color name="colorPrimary">#0a2c63</color>
+      <color name="colorPrimaryDark">#1047a1</color>
+      <color name="colorAccent">#ffaa21</color>
+
+      <color name="colorDark">#333745</color>
+      <color name="colorReed">#E63462</color>
+      <color name="colorOrange">#FE5F55</color>
+      <color name="colorBlueGreen">#C7EFCF</color>
+      <color name="colorGreyWhite">#EEF5DB</color>
+
+      <color name="colorWhite">#FFF</color>
+
+      // other colors
+      <color name="colorBlack">#222</color>
+      <color name="colorBack">#262933</color>
+      <color name="colorBack2">#1c1e25</color>
+
+      <color name="colorBlue100">#003c8f</color>
+      <color name="colorBlue80">#0355b3</color>
+      <color name="colorBlue60">#0269c9</color>
+      <color name="colorBlue40">#0077d9</color>
+      <color name="colorBlue20">#2196f3</color>
+      <color name="colorBlue10">#9be7ff</color>
+
+      <color name="colorGreen100">#00600f</color>
+      <color name="colorGreen80">#087f23</color>
+      <color name="colorGreen60">#338a3e</color>
+      <color name="colorGreen40">#4caf50</color>
+      <color name="colorGreen20">#75a478</color>
+      <color name="colorGreen10">#b2fab4</color>
+
+      <color name="colorYellow100">#fbc02d</color>
+      <color name="colorYellow80">#fdd835</color>
+      <color name="colorYellow60">#ffee58</color>
+      <color name="colorYellow40">#fff176</color>
+      <color name="colorYellow20">#fff59d</color>
+      <color name="colorYellow10">#fff9c4</color>
+
+      <color name="colorRed100">#9a0007</color>
+      <color name="colorRed80">#d32f2f</color>
+      <color name="colorRed60">#e53935</color>
+      <color name="colorRed40">#ef5350</color>
+      <color name="colorRed20">#e57373</color>
+      <color name="colorRed10">#ef9a9a</color>
+
+      <color name="colorOrange100">#bb4d00</color>
+      <color name="colorOrange80">#f57c00</color>
+      <color name="colorOrange60">#fb8c00</color>
+      <color name="colorOrange40">#ff9800</color>
+      <color name="colorOrange20">#ffa726</color>
+      <color name="colorOrange10">#ffcc80</color>
+
+      <color name="colorGrey100">#707070</color>
+      <color name="colorGrey80">#9e9e9e</color>
+      <color name="colorGrey60">#aeaeae</color>
+      <color name="colorGrey40">#bdbdbd</color>
+      <color name="colorGrey20">#e2e2e2</color>
+      <color name="colorGrey15">#efeeee</color>
+      <color name="colorGrey10">#eeeeee</color>
+
+</resources>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+      xmlns:tools="http://schemas.android.com/tools"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="vertical"
+      tools:context=".view.JsonMain">
+
+      <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <include layout="@layout/toolbar" />
+      </com.google.android.material.appbar.AppBarLayout>
+
+      <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:orientation="vertical">
+                  <include layout="@layout/model_preview" />
+                  <com.google.android.material.tabs.TabLayout
+                        android:id="@+id/tablay"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:tabIndicatorColor="@color/colorPrimary"
+                        app:tabIndicatorHeight="1dp"
+                        app:tabSelectedTextColor="@color/colorBack"
+                        android:visibility="gone"/>
+                  <androidx.viewpager.widget.ViewPager
+                        android:id="@+id/fragmentTab"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorGrey15" />
+            </LinearLayout>
+            <Button
+                  android:id="@+id/savePreview"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:padding="@dimen/dimen_default"
+                  android:text="Save"
+                  android:textColor="@color/colorWhite"
+                  android:background="@color/colorPrimaryDark"
+                  android:layout_alignParentEnd="true"
+                  android:layout_alignParentBottom="true"
+                  android:layout_marginBottom="@dimen/dimen_default"
+                  android:layout_marginEnd="@dimen/dimen_default"/>
+      </RelativeLayout>
+
+</LinearLayout>

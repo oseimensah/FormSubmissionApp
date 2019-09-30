@@ -1,0 +1,111 @@
+{
+    "PHC" : {
+        "form": "PHC1A",
+        "title": "Household Population Questionnaire",
+        "section": "Section B: Socio-Demographic Characteristics",
+        "pages": [
+            {
+                "fields": [
+                    {
+                        "label": "Detailed Physical Address of House/Compound",
+                        "code": "A01",
+                        "hint": "Enter the value in full",
+                        "type": "textarea",
+                        "required": "true"
+                    },
+                    {
+                        "label": "Ghana Post Digital Address",
+                        "code": "A02",
+                        "hint" : "Enter second",
+                        "type": "text",
+                        "required": "true"
+                    },
+                    {
+                        "label": "HH Contact Phone Number 1",
+                        "code": "A03a",
+                        "type": "numeric",
+                        "required": "true"
+                    },
+                    {
+                        "label": "HH Contact Phone Number 2",
+                        "code": "A03b",
+                        "type": "numeric",
+                        "required": "false"
+                    }
+                ]
+            },
+            {
+                "fields": [
+                    {
+                        "label": "Enumeration Area Code",
+                        "code": "A04",
+                        "type": "textarea",
+                        "required": "false"
+                    },
+                    {
+                        "label": "Structure number of house/compound",
+                        "code": "A05",
+                        "type": "text",
+                        "required": "true"
+                    },
+                    {
+                        "label": "Serial Number of household within house/compound",
+                        "code": "A06",
+                        "type": "text",
+                        "required": "true"
+                    },
+                    {
+                        "label": "Type of residence",
+                        "code": "A07",
+                        "type": "radio",
+                        "required": "true",
+                        "options": [
+                            {
+                                "id": "1",
+                                "value": "Occupied housing unit"
+                            },
+                            {
+                                "id": "2",
+                                "value": "Vacant housing Unit"
+                            }
+                        ],
+                        "gotoIf": [
+                            {
+                                "answer": "2",
+                                "next": "H01"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+              "fields": [
+                  {
+                      "label": "What is (are) the languages you can speak",
+                      "code": "A17",
+                      "type": "checkbox",
+                      "required": "true",
+                      "options": [
+                          {
+                              "id": "1",
+                              "value": "Twi"
+                          },
+                          {
+                            "id": "2",
+                              "value": "Ga"
+                          },
+                          {
+                              "id": "3",
+                              "value": "Ewe"
+                          },
+                          {
+                              "id": "4",
+                              "value": "Nzema"
+                          }
+                      ]
+                  }
+              ]
+            }
+        ]
+    }
+}

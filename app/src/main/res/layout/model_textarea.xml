@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+      xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+      android:layout_width="match_parent"
+    android:layout_height="match_parent"
+      android:layout_marginTop="@dimen/dimen_medium_one"
+      android:id="@+id/textareabig">
+<EditText
+    android:id="@+id/et_answer_textarea"
+    android:layout_width="match_parent"
+    android:layout_height="124dp"
+    android:gravity="top|left"
+      android:background="@drawable/edit_text"
+      android:layout_marginStart="@dimen/dimen_medium"
+      android:layout_marginEnd="@dimen/dimen_medium"
+    android:padding="@dimen/dimen_default"/>
+</LinearLayout>

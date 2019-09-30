@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+      xmlns:android="http://schemas.android.com/apk/res/android"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+      android:id="@+id/main_toolbar"
+      app:cardBackgroundColor="@color/colorPrimary"
+      android:elevation="1dp"
+      app:cardMaxElevation="2dp">
+      <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingStart="@dimen/dimen_default"
+            android:paddingEnd="@dimen/dimen_small"
+            android:paddingTop="@dimen/dimen_small"
+            android:paddingBottom="@dimen/dimen_small"
+            >
+            <ImageView
+                  android:id="@+id/coat_img"
+                  android:layout_width="36dp"
+                  android:layout_height="36dp"
+                  android:src="@drawable/coatofarms"/>
+            <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:id="@+id/tool_title"
+                  android:layout_toEndOf="@id/coat_img"
+                  android:text="population"
+                  android:textColor="@color/colorWhite"
+                  android:layout_marginStart="@dimen/dimen_small"
+                  android:layout_marginTop="-4dp"
+                  android:textStyle="bold"/>
+            <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:id="@+id/form_title"
+                  android:layout_toEndOf="@id/coat_img"
+                  android:layout_below="@id/tool_title"
+                  android:text="population"
+                  android:textColor="@color/colorWhite"
+                  android:layout_marginStart="@dimen/dimen_small"
+
+                  android:textStyle="bold"/>
+            <ImageView
+                  android:id="@+id/gss_img"
+                  android:layout_width="36dp"
+                  android:layout_height="36dp"
+                  android:layout_alignParentEnd="true"
+                  android:src="@drawable/gss"
+                  android:layout_marginEnd="@dimen/dimen_small"/>
+      </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

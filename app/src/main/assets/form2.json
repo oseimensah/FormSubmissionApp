@@ -1,0 +1,1043 @@
+{
+    "PHC" : {
+        "form": "PHC1B",
+        "title": "Institutional Population Questionnaire",
+        "pages": [
+            {
+                "fields": [
+                    {
+                        "label": "Detailed Physical Address of House/Compound",
+                        "code": "A01",
+                        "type": "textarea"
+                    },
+                    {
+                        "label": "Ghana Post Digital Address",
+                        "code": "A02",
+                        "type": "text"
+                    },
+                    {
+                        "label": "HH Contact Phone Number 1",
+                        "code": "A03a",
+                        "type": "text"
+                    },
+                    {
+                        "label": "HH Contact Phone Number 2",
+                        "code": "A03b",
+                        "type": "text",
+                        "required": "false"
+                    }
+                ]
+            },
+            {
+                "fields": [
+                    {
+                        "label": "Enumeration Area Code",
+                        "code": "A04",
+                        "type": "textarea"
+                    },
+                    {
+                        "label": "Structure number of Group Quarters",
+                        "code": "A05",
+                        "type": "text"
+                    },
+                    {
+                        "label": "Serial Number of household within structure",
+                        "code": "A06",
+                        "type": "text"
+                    }
+                ]
+            },
+            {
+                "fields": [
+                    {
+                        "label": "Date Started",
+                        "code": "A08",
+                        "type": "date"
+                    },
+                    {
+                        "label": "Date Completed",
+                        "code": "A09",
+                        "type": "date"
+                    },
+                    {
+                        "label": "Total Number of Visists",
+                        "code": "A10a",
+                        "type": "numeric"
+                    }
+                ]
+            },
+            {
+                "fields": [
+                    {
+                        "label": "Male",
+                        "code": "A15i",
+                        "type": "numeric"
+                    },
+                    {
+                        "label": " Female",
+                        "code": "A15ii",
+                        "type": "numeric"
+                    }
+                ]
+            },
+            {
+                "fields": [
+                    {
+                        "Label": "Type of residence",
+                        "code": "A07",
+                        "type": "numeric",
+                        "options": [
+                            {
+                                "03": "Homeless house hold ",
+                                "04": "Schools,college,university,seminary,monastery,convent,school hostel",
+                                "05": "Children's`SOS,Orphanage,Destitute home,Old People's home",
+                                "06": "Hospital, clinic, maternity home, divine healers, herbalist establishment,leper settlement,infirmary,prayer camp",
+                                "07": "Prison,Borstal Institution,Police`Immigration`Military cells,Industrial school,Remand home",
+                                "08": "Service training institution including police training college,military and army camp",
+                                "09": "Mining camp,road camp,farm camp,refugee camp",
+                                "10": "Hotel,rest-house,transit quarters,hostel,bar,night club,restaurant"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "label": "Roster",
+                "repeat": "5",
+                "fields": [
+                    {
+                        "label": "Name ",
+                        "code": "A11a",
+                        "type": "text"
+                    },
+                    {
+                        "label": "Relationship to head",
+                        "code": "A11a",
+                        "type": "radio",
+                        "options": [
+                            {
+                                "01": "Head",
+                                "02": "Spouse(Wife/Husband)",
+                                "03": "Child(Son/Daughter)",
+                                "04": "Parent/Parent in-law",
+                                "05": "Son in-law/Daughter in-law",
+                                "06": "Grandchild",
+                                "07": "Brother/Sister",
+                                "08": "Step Child",
+                                "09": "Foster Child",
+                                "10": "Other Child",
+                                "11": "Non-relative",
+                                "12": "House help(other relative)",
+                                "13": "House help(non-relative)",
+                                "14": "Group Quarters/Outdoor Sleeper"
+                            }
+                        ]
+                    },
+                    {
+                        "label": "Sex",
+                        "code": "A11a",
+                        "type": "radio",
+                        "options": [
+                            {
+                                "01": "Male",
+                                "02": "Female"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "label": "Social Demographic Characteristics",
+                "repeat": "5",
+                "fields": [
+                    {
+                        "label": "Full Name  ",
+                        "code": "P00",
+                        "type": "text"
+                    },
+                    {
+                        "label": "Date of Birth",
+                        "code": "P01",
+                        "type": "date"
+                    },
+                    {
+                        "label": "Age (How old is [Name], in completed years?)",
+                        "code": "P02",
+                        "type": "numeric"
+                    },
+                    {
+                        "label": "What is [Name]'s other Nationality",
+                        "code": "P03bi",
+                        "type": "text"
+                    },
+                    {
+                        "label": "What is [NAME]'s country of Nationality",
+                        "code": "P03bii",
+                        "type": "text",
+                        "gotoIf": [
+                            {
+                                "answer": "0",
+                                "next": "P05"
+                            }
+                        ]
+                    },
+                    {
+                        "label": "What is [Name]'s Nationality",
+                        "code": "P03a",
+                        "type": "radio",
+                        "options": [
+                            {
+                                "01": "Ghanaian by Birth",
+                                "02": "Ghanaian by Naturalization",
+                                "03": "Dual Nationality",
+                                "04": "Non-Ghanaian"
+                            }
+                        ],
+                        "gotoIf": [
+                            {
+                                "answer": "1",
+                                "next": "P04"
+                            },
+                            {
+                                "answer": "2",
+                                "next": "P05"
+                            },
+                            {
+                                "answer": "3",
+                                "next": "P03bi"
+                            },
+                            {
+                                "answer": "4",
+                                "next": "P03bii"
+                            }
+                        ]
+                    },
+                    {
+                        "label": "Name of which ethnic group does he/she belong?",
+                        "code": "P04i",
+                        "type": "text"
+                    },
+                    {
+                        "label": "Code of which ethnic group does he/she belong?",
+                        "code": "P04ii",
+                        "type": "text"
+                    },
+                    {
+                        "label": "Was he/she born in this village/town?",
+                        "code": "P05",
+                        "type": "radio",
+                        "options": [
+                            {
+                                "01": "Yes",
+                                "02": "No"
+                            }
+                        ],
+                        "gotoIf": [
+                            {
+                                "answer": "1",
+                                "next": "P07"
+                            }
+                        ]
+                    },
+                    {
+                        "label": "What is the NAME of District or country was born?",
+                        "code": "P06i",
+                        "type": "text"
+                    },
+                    {
+                        "label": "What is the NAME of District or country was born?",
+                        "code": "P06i",
+                        "type": "text"
+                    },
+                    {
+                        "label": "What is the Code of District or country was born?",
+                        "code": "P06ii",
+                        "type": "text",
+                        "gotoIf": [
+                            {
+                                "answer": "0",
+                                "next": "P08a"
+                            }
+                        ]
+                    },
+                    {
+                        "label": "Has he/she been living in this village or town since birth?",
+                        "code": "P07",
+                        "type": "radio",
+                        "options": [
+                            {
+                                "01": "Yes",
+                                "02": "No"
+                            }
+                        ],
+                        "gotoIf": [
+                            {
+                                "answer": "1",
+                                "next": "P09"
+                            }
+                        ]
+                    },
+                    {
+                        "label": "For how long has he/she been living continuously in this village or town?(Years)",
+                        "code": "P08a",
+                        "type": "numeric"
+                    },
+                    {
+                        "label": "What was his/her main reason for moving to this village/town",
+                        "code": "P08b",
+                        "type": "radio",
+                        "options": [
+                            {
+                                "01": "Employment",
+                                "02": "Settlement",
+                                "03": "Marriage/Family reunification",
+                                "04": "Education/Training",
+                                "05": "Asylum/refugee",
+                                "06": "Conflict (war,ethnic, political)",
+                                "07": "Disaster (flood, drought, fire, etc)",
+                                "08": "Other"
+                            }
+                        ]
+                    },
+                    {
+                        "label": "In what district or country was he/she usual place of residence?",
+                        "code": "P08c",
+                        "type": "numeric"
+                    },
+                    {
+                        "label": "What is his/her religious affiliation?",
+                        "code": "P09",
+                        "type": "radio",
+                        "options": [
+                            {
+                                "01": "No Religion",
+                                "02": "Catholic",
+                                "03": "Protestant(Anglican, Lutheran, Presbyterian, Methodist, etc)",
+                                "04": "Pentecoastal/Charismatic",
+                                "05": "Other Christian",
+                                "06": "Islam",
+                                "07": "Ahmadi",
+                                "08": "Traditionalist",
+                                "09": "Other"
+                            }
+                        ]
+                    },
+                    {
+                        "label": "What is his/her current marital status(Answer for persons 12 years and older)",
+                        "code": "P10",
+                        "type": "radio",
+                        "options": [
+                            {
+                                "01": "Never married",
+                                "02": "Informal/consenual union/Living together",
+                                "03": "Married",
+                                "04": "Separated",
+                                "05": "Divorced",
+                                "06": "Widowed"
+                            }
+                        ]
+                    },
+                    {
+                        "label": "Can he/she read and write in any language?",
+                        "code": "P11a",
+                        "type": "radio",
+                        "options": [
+                            {
+                                "01": "Yes, read only",
+                                "02": "Yes, read and write",
+                                "03": "No"
+                            }
+                        ],
+                        "gotoIf": [
+                            {
+                                "answer": "3",
+                                "next": "P12a"
+                            }
+                        ]
+                    },
+                    {
+                        "label": "If Yes, read only in p11a; In what language can he/she read",
+                        "code": "P11b",
+                        "type": "radio",
+                        "options": [
+                            {
+                                "01": "English Only",
+                                "02": "Ghanaian language only",
+                                "03": "French only",
+                                "04": "English and Ghanaian language",
+                                "05": "English and French",
+                                "06": "French and Ghanaian language",
+                                "07": "English, French and Ghanaian language",
+                                "08": "Other, Specify"
+                            }
+                        ]
+                    },
+                    {
+                        "label": "Has he/she ever attended school or is he or she attending school now?",
+                        "code": "P12a",
+                        "type": "radio",
+                        "options": [
+                            {
+                                "01": "Never",
+                                "02": "Now",
+                                "03": "past"
+                            }
+                        ],
+                        "gotoIf": [
+                            {
+                                "answer": "1",
+                                "next": "P13a"
+                            }
+                        ]
+                    },
+                    {
+                        "label": "What is the highest level of schooling he/she is attending now/attended in the past",
+                        "code": "P12b",
+                        "type": "radio",
+                        "options": [
+                            {
+                                "01": "Nursery",
+                                "02": "Kindergarten",
+                                "03": "Primary",
+                                "04": "JSS/JHS",
+                                "05": "Middle",
+                                "06": "SSS/SHS",
+                                "07": "Secondary",
+                                "08": "Voc/technical/commercial",
+                                "09": "Post middle/secondary certificate (teacher training/college of education, agric, nursing, etc)",
+                                "10": "Post-secondary, Diploma/(Universtiy diploma, HND, teacher training/college of education diploma, etc)",
+                                "11": "Bachelor Degree",
+                                "12": "Masters",
+                                "13": "PhD",
+                                "14": "Other"
+                            }
+                        ],
+                        "gotoIf": [
+                            {
+                                "answer": "12",
+                                "next": "P13a"
+                            },
+                            {
+                                "answer": "13",
+                                "next": "P13a"
+                            }
+                        ]
+                    },
+                    {
+                        "label": "What is the highest grade (form/class/level, etc) he or she has completed at that level of schooling?",
+                        "code": "P12c",
+                        "type": "text"
+                    },
+                    {
+                        "label": "During the 7 days before census night, did he or she work in any activity for pay (cash or kind) or profit for at least one hour?",
+                        "code": "P13a",
+                        "type": "radio",
+                        "options": [
+                            {
+                                "01": "Yes",
+                                "02": "No"
+                            }
+                        ],
+                        "gotoIf": [
+                            {
+                                "answer": "1",
+                                "next": "P14"
+                            }
+                        ]
+                    },
+                    {
+                        "label": "During the 7 days, how has he or she mainly engaged?",
+                        "code": "P13b",
+                        "type": "radio",
+                        "options": [
+                            {
+                                "01": "Worked in economic activity, but received no payment",
+                                "02": "Did not work, but had job to go back to",
+                                "03": "Worked before, seeking work and available for work",
+                                "04": "Seeking work for the first time and available for work",
+                                "05": "Did not work and not seeking work"
+                            }
+                        ],
+                        "gotoIf": [
+                            {
+                                "answer": "3",
+                                "next": "P14"
+                            },
+                            {
+                                "answer": "4",
+                                "next": "P18a"
+                            },
+                            {
+                                "answer": "5",
+                                "next": "P13e"
+                            }
+                        ]
+                    },
+                    {
+                        "label": "Which type of work has he or she been mainly engaged in?",
+                        "code": "P13c",
+                        "type": "radio",
+                        "options": [
+                            {
+                                "01": "Wage/Salary/Profit work",
+                                "02": "Paid apprentice work",
+                                "03": "Unpaid apprentice work",
+                                "04": "Contributing family work",
+                                "05": "Voluntary work without pay",
+                                "06": "Non-voluntary work without pay",
+                                "07": "Own-use production work",
+                                "08": "Own-use service work"
+                            }
+                        ],
+                        "gotoIf": [
+                            {
+                                "answer": "1",
+                                "next": "P14"
+                            },
+                            {
+                                "answer": "4",
+                                "next": "P14"
+                            },
+                            {
+                                "answer": "5",
+                                "next": "P14"
+                            },
+                            {
+                                "answer": "6",
+                                "next": "P14"
+                            }
+                        ]
+                    },
+                    {
+                        "label": "Are the products obtained from his or her activity intended for sale or barter or for family use?",
+                        "code": "P13d",
+                        "type": "radio",
+                        "options": [
+                            {
+                                "01": "Only for sale/barter",
+                                "02": "Mainly for sale/barter but some for family use",
+                                "03": "Mainly for own/family use but some for sale/barter",
+                                "04": "Only for own/family use"
+                            }
+                        ],
+                        "gotoIf": [
+                            {
+                                "answer": "0",
+                                "next": "P14"
+                            }
+                        ]
+                    },
+                    {
+                        "label": "Why did he or she not work and not seeking work?",
+                        "code": "P13e",
+                        "type": "radio",
+                        "options": [
+                            {
+                                "01": "Did home duties (household chores/ full time homemaker)",
+                                "02": "In full time education/student",
+                                "03": "Pensioner/Retired",
+                                "04": "Disabled",
+                                "05": "Too sick to work",
+                                "06": "Too old",
+                                "07": "Yoo young",
+                                "08": "Other"
+                            }
+                        ],
+                        "gotoIf": [
+                            {
+                                "answer": "0",
+                                "next": "P18a"
+                            }
+                        ]
+                    },
+                    {
+                        "label": "What kind of work did he or she do in his or her main job/business? Detailed Description of occupation",
+                        "code": "P14a",
+                        "type": "text"
+                    },
+                    {
+                        "label": "What kind of work did he or she do in his or her main job/business? occupational code",
+                        "code": "P14b",
+                        "type": "text"
+                    },
+                    {
+                        "label": "What is the name of the establishment/business where he or she currently works/previously worked?",
+                        "code": "P15",
+                        "type": "text"
+                    },
+                    {
+                        "label": "What is the main economic activity (product or service) of the establisment where he or she works/worked? Description",
+                        "code": "P15a",
+                        "type": "text"
+                    },
+                    {
+                        "label": "What is the main economic activity (product or service) of the establisment where he or she works/worked? Activity code",
+                        "code": "P15a",
+                        "type": "text"
+                    },
+                    {
+                        "label": "What was his or her employment status in that establishement/business/industry?",
+                        "code": "P16",
+                        "type": "radio",
+                        "options": [
+                            {
+                                "01": "Employee",
+                                "02": "Self-employed without employees",
+                                "03": "Self-employed with employees",
+                                "04": "Casual worker",
+                                "05": "Contributing family worker",
+                                "06": "Paid apprentice",
+                                "07": "Unpaid apprentice",
+                                "08": "Domestic employee (househelp,garden boy, etc.)",
+                                "09": "Other"
+                            }
+                        ]
+                    },
+                    {
+                        "label": "In what sector was he or she mainly working? was his or her employment status in that establishement/business/industry?",
+                        "code": "P17",
+                        "type": "radio",
+                        "options": [
+                            {
+                                "01": "Public (Governement)",
+                                "02": "Semi-Public/Parastatal",
+                                "03": "Private Formal",
+                                "04": "Private Informal",
+                                "05": "NGO/CSO (Local)",
+                                "06": "NGO/CSO (International)",
+                                "07": "International Organisation"
+                            }
+                        ]
+                    },
+                    {
+                        "label": "Does he or she have difficulty in seeing even if wearing glasses? Will you say that he or she has no difficulty, some diffuculty, a lot of dificulty or cannot see at all?",
+                        "code": "P18a",
+                        "type": "radio",
+                        "options": [
+                            {
+                                "01": "No Difficulty",
+                                "02": "Yes, some difficulty",
+                                "03": "Yes, a lot of difficulty",
+                                "04": "Cannot do at all"
+                            }
+                        ]
+                    },
+                    {
+                        "label": "Does he or she have difficulty hearing even if using a hearing aid? Will you say that he or she has no difficulty, some difficulty, a lot of difficulty or cannot hear at all?",
+                        "code": "P18b",
+                        "type": "radio",
+                        "options": [
+                            {
+                                "01": "No Difficulty",
+                                "02": "Yes, some difficulty",
+                                "03": "Yes, a lot of difficulty",
+                                "04": "Cannot do at all"
+                            }
+                        ]
+                    },
+                    {
+                        "label": "Does he or she have difficulty walking or climbing stairs? Will you say that he or she has no difficulty, some difficulty, a lot of difficulty or cannot do at all?",
+                        "code": "P18c",
+                        "type": "radio",
+                        "options": [
+                            {
+                                "01": "No Difficulty",
+                                "02": "Yes, some difficulty",
+                                "03": "Yes, a lot of difficulty",
+                                "04": "Cannot do at all"
+                            }
+                        ]
+                    },
+                    {
+                        "label": "Does he or she have difficulty remembering or concentrating? Will you say that he or she has no difficulty, some difficulty, a lot of difficulty or cannot remember or concentrate at all?",
+                        "code": "P18d",
+                        "type": "radio",
+                        "options": [
+                            {
+                                "01": "No Difficulty",
+                                "02": "Yes, some difficulty",
+                                "03": "Yes, a lot of difficulty",
+                                "04": "Cannot do at all"
+                            }
+                        ]
+                    },
+                    {
+                        "label": "Does he or she have difficulty with self-care such as washing all over the body or dressing? Will you say that he or she has no difficulty, some difficulty, a lot of difficulty or cannot do at all?",
+                        "code": "P18e",
+                        "type": "radio",
+                        "options": [
+                            {
+                                "01": "No Difficulty",
+                                "02": "Yes, some difficulty",
+                                "03": "Yes, a lot of difficulty",
+                                "04": "Cannot do at all"
+                            }
+                        ]
+                    },
+                    {
+                        "label": "Using his/her usual language, does he or she have difficulty communicating (e.g. understanding or being understood by others)? Will you say that he or she has no difficulty, some difficulty, a lot of difficulty or cannot communicate at all?",
+                        "code": "P18f",
+                        "type": "radio",
+                        "options": [
+                            {
+                                "01": "No Difficulty",
+                                "02": "Yes, some difficulty",
+                                "03": "Yes, a lot of difficulty",
+                                "04": "Cannot do at all"
+                            }
+                        ]
+                    },
+                    {
+                        "label": "Does he or she use Mobile Phone (smart)?",
+                        "code": "P19ai",
+                        "type": "radio",
+                        "options": [
+                            {
+                                "01": "Yes",
+                                "02": "No"
+                            }
+                        ]
+                    },
+                    {
+                        "label": "Does he or she use Mobile Phone(Non-Smart)?",
+                        "code": "P19aii",
+                        "type": "radio",
+                        "options": [
+                            {
+                                "01": "Yes",
+                                "02": "No"
+                            }
+                        ]
+                    },
+                    {
+                        "label": "Does he or she use Cordless Cellular telephone?",
+                        "code": "P19aiii",
+                        "type": "radio",
+                        "options": [
+                            {
+                                "01": "Yes",
+                                "02": "No"
+                            }
+                        ]
+                    },
+                    {
+                        "label": "Does he or she use Fixed telephone line?",
+                        "code": "P19aiv",
+                        "type": "radio",
+                        "options": [
+                            {
+                                "01": "Yes",
+                                "02": "No"
+                            }
+                        ]
+                    },
+                    {
+                        "label": "Does he or she use Tablet?",
+                        "code": "P19av",
+                        "type": "radio",
+                        "options": [
+                            {
+                                "01": "Yes",
+                                "02": "No"
+                            }
+                        ]
+                    },
+                    {
+                        "label": "Does he or she use Laptop?",
+                        "code": "P19avi",
+                        "type": "radio",
+                        "options": [
+                            {
+                                "01": "Yes",
+                                "02": "No"
+                            }
+                        ]
+                    },
+                    {
+                        "label": "Does he or she use Desktop Computer?",
+                        "code": "P19avii",
+                        "type": "radio",
+                        "options": [
+                            {
+                                "01": "Yes",
+                                "02": "No"
+                            }
+                        ]
+                    },
+                    {
+                        "label": "Does he or she use Television (Digital TV)?",
+                        "code": "P19aviii",
+                        "type": "radio",
+                        "options": [
+                            {
+                                "01": "Yes",
+                                "02": "No"
+                            }
+                        ]
+                    },
+                    {
+                        "label": "Does he or she use Television (Analogue)?",
+                        "code": "P19aix",
+                        "type": "radio",
+                        "options": [
+                            {
+                                "01": "Yes",
+                                "02": "No"
+                            }
+                        ]
+                    },
+                    {
+                        "label": "Does he or she use Radio/FM?",
+                        "code": "P19ax",
+                        "type": "radio",
+                        "options": [
+                            {
+                                "01": "Yes",
+                                "02": "No"
+                            }
+                        ]
+                    },
+                    {
+                        "label": "Does he or she own Mobile Phone (smart)?",
+                        "code": "P19bi",
+                        "type": "radio",
+                        "options": [
+                            {
+                                "01": "Yes",
+                                "02": "No"
+                            }
+                        ]
+                    },
+                    {
+                        "label": "Does he or she own Mobile Phone(Non-Smart)?",
+                        "code": "P19bii",
+                        "type": "radio",
+                        "options": [
+                            {
+                                "01": "Yes",
+                                "02": "No"
+                            }
+                        ]
+                    },
+                    {
+                        "label": "Does he or she own Cordless Cellular telephone?",
+                        "code": "P18biii",
+                        "type": "radio",
+                        "options": [
+                            {
+                                "01": "Yes",
+                                "02": "No"
+                            }
+                        ]
+                    },
+                    {
+                        "label": "Does he or she own Fixed telephone line?",
+                        "code": "P19biv",
+                        "type": "radio",
+                        "options": [
+                            {
+                                "01": "Yes",
+                                "02": "No"
+                            }
+                        ]
+                    },
+                    {
+                        "label": "Does he or she own Tablet?",
+                        "code": "P19bv",
+                        "type": "radio",
+                        "options": [
+                            {
+                                "01": "Yes",
+                                "02": "No"
+                            }
+                        ]
+                    },
+                    {
+                        "label": "Does he or she own Laptop?",
+                        "code": "P19bvi",
+                        "type": "radio",
+                        "options": [
+                            {
+                                "01": "Yes",
+                                "02": "No"
+                            }
+                        ]
+                    },
+                    {
+                        "label": "Does he or she own Desktop Computer?",
+                        "code": "P19bvii",
+                        "type": "radio",
+                        "options": [
+                            {
+                                "01": "Yes",
+                                "02": "No"
+                            }
+                        ]
+                    },
+                    {
+                        "label": "Does he or she own Television (Digital TV)?",
+                        "code": "P19bviii",
+                        "type": "radio",
+                        "options": [
+                            {
+                                "01": "Yes",
+                                "02": "No"
+                            }
+                        ]
+                    },
+                    {
+                        "label": "Does he or she own Television (Analogue)?",
+                        "code": "P19bix",
+                        "type": "radio",
+                        "options": [
+                            {
+                                "01": "Yes",
+                                "02": "No"
+                            }
+                        ]
+                    },
+                    {
+                        "label": "Does he or she own Radio/FM?",
+                        "code": "P19bx",
+                        "type": "radio",
+                        "options": [
+                            {
+                                "01": "Yes",
+                                "02": "No"
+                            }
+                        ]
+                    },
+                    {
+                        "label": "Did he or she use internet in the last 3 months, using mobile phone?",
+                        "code": "P19ci",
+                        "type": "radio",
+                        "options": [
+                            {
+                                "01": "Yes",
+                                "02": "No"
+                            }
+                        ]
+                    },
+                    {
+                        "label": "Did he or she use internet in the last 3 months, using laptop?",
+                        "code": "P19cii",
+                        "type": "radio",
+                        "options": [
+                            {
+                                "01": "Yes",
+                                "02": "No"
+                            }
+                        ]
+                    },
+                    {
+                        "label": "Did he or she use internet in the last 3 months, using desktop?",
+                        "code": "P19ciii",
+                        "type": "radio",
+                        "options": [
+                            {
+                                "01": "Yes",
+                                "02": "No"
+                            }
+                        ]
+                    },
+                    {
+                        "label": "Did he or she use internet in the last 3 months, using tablet?",
+                        "code": "P19civ",
+                        "type": "radio",
+                        "options": [
+                            {
+                                "01": "Yes",
+                                "02": "No"
+                            }
+                        ]
+                    },
+                    {
+                        "label": "Did he or she use internet in the last 3 months, using other devices?",
+                        "code": "P19cv",
+                        "type": "radio",
+                        "options": [
+                            {
+                                "01": "Yes",
+                                "02": "No"
+                            }
+                        ]
+                    },
+                    {
+                        "label": "Did he or she use Mobile Broadband to access the internet?",
+                        "code": "P19di",
+                        "type": "radio",
+                        "options": [
+                            {
+                                "01": "Yes",
+                                "02": "No"
+                            }
+                        ]
+                    },
+                    {
+                        "label": "Did he or she use Fixed/Fibre Broadband to access the internet?",
+                        "code": "P19dii",
+                        "type": "radio",
+                        "options": [
+                            {
+                                "01": "Yes",
+                                "02": "No"
+                            }
+                        ]
+                    },
+                    {
+                        "label": "Did he or she use Satellite Broadband to access the internet?",
+                        "code": "P19diii",
+                        "type": "radio",
+                        "options": [
+                            {
+                                "01": "Yes",
+                                "02": "No"
+                            }
+                        ]
+                    },
+                    {
+                        "label": "Did he or she use mobile phone for mobile money in the last 3 months?",
+                        "code": "P19e",
+                        "type": "radio",
+                        "options": [
+                            {
+                                "01": "Yes",
+                                "02": "No"
+                            }
+                        ]
+                    },
+                    {
+                        "label": "How many male children has he or she ever born alive?",
+                        "code": "P20ai",
+                        "type": "numeric"
+                    },
+                    {
+                        "label": "How many female children has he or she ever born alive?",
+                        "code": "P20aii",
+                        "type": "numeric"
+                    },
+                    {
+                        "label": "How many male children ever born alive to him/her are still surviving (living with you or elsewhere)?",
+                        "code": "P20bi",
+                        "type": "numeric"
+                    },
+                    {
+                        "label": "How many female children ever born alive to him/her are still surviving (living with you or elsewhere)?",
+                        "code": "P20bii",
+                        "type": "numeric"
+                    },
+                    {
+                        "label": "How many male children has he or she born alive in the past 12 months?",
+                        "code": "P20ci",
+                        "type": "numeric"
+                    },
+                    {
+                        "label": "How many female children has he or she born alive in the past 12 months?",
+                        "code": "P20cii",
+                        "type": "numeric"
+                    }
+                ]
+            }
+        ]
+    }
+}

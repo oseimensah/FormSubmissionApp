@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+      <dimen name="dimen_default">16dp</dimen>
+      <dimen name="dimen_small">8dp</dimen>
+      <dimen name="dimen_medium">40dp</dimen>
+      <dimen name="dimen_textSize_medium">24sp</dimen>
+      <dimen name="dimen_textSize_default">16sp</dimen>
+      <dimen name="dimen_default_small">30dp</dimen>
+      <dimen name="dimen_medium_one">64dp</dimen>
+</resources>
